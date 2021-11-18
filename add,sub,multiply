@@ -1,0 +1,38 @@
+n=int(input("number of rows:"))
+m=int(input("number of columns:"))
+matrix1=[]
+for i in range(n):
+  x1=[]
+  for j in range(m):
+    num1=int(input("enter the elements for first matrix:"))
+    x1.append(num1)
+  matrix1.append(x1)
+print(f"first matrix {matrix1}")
+matrix2=[]
+for i in range(n):
+  x2=[]
+  for j in range(m):
+    num2=int(input("enter the elements for second matrix:"))
+    x2.append(num2)
+  matrix2.append(x2)
+print(f"second matrix {matrix2}")
+add=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(matrix1)):
+  for j in range(len(matrix2)):
+    add[i][j]=matrix1[i][j]+matrix2[i][j]
+
+print(f"addition of matrix= {add}")
+
+sub=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(matrix1)):
+  for j in range(len(matrix2)):
+    sub[i][j]=matrix1[i][j]-matrix2[i][j]
+
+print(f"sustraction of matrix= {sub}")
+
+mul=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(matrix1)):
+  for j in range(len(matrix2[0])):
+    for k in range(len(matrix2)):
+      mul[i][j] += matrix1[i][k]*matrix2[k][j]
+print(f"multiplication of matrix= {mul}")
