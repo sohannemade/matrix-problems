@@ -1,0 +1,17 @@
+n=int(input("number of rows:"))
+m=int(input("number of columns:"))
+matrix3=[]
+for i in range(n):
+  x3=[]
+  for j in range(m):
+    num3=int(input("enter the elements:"))
+    x3.append(num3)
+  matrix3.append(x3)
+print(f"first matrix {matrix3}")
+
+transpose=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(matrix3)):
+  for j in range(matrix3[0]):
+    transpose[j][i]=matrix3[i][j]
+
+print(f"transpose of matrix= {transpose}")
